@@ -1,11 +1,3 @@
-# Dieses Script enthält Ideen und Codesnippets von folgenden Seiten:
-# https://mickderksen.wordpress.com/2016/06/08/how-to-schedule-a-vpn-connection-on-synology/
-# https://www.synology-forum.de/showthread.html?95824-Skript-um-VPN-Verbindung-zu-pr%C3%BCfen-und-wiederherstellen&p=779549&viewfull=1#post779549
-# https://www.synology-forum.de/showthread.html?43444-Befehl-f%C3%BCr-Aufbauen-der-VPN-Verbindung
-# https://www.synology-forum.de/showthread.html?29481-Network-Backup-inklusive-Shutdown/page6
-# https://bernd.distler.ws/archives/1835-Synology-automatische-Datensicherung-mit-DSM6.html
-# https://www.synology-forum.de/showthread.html?100129-rsync-Server-nach-Ende-der-Hyper-Backup-Jobs-herunterfahren
-
 # VPN Parameterdatei für den Verbindungsaufbau konfigurieren. Parameter findet man unter
 # /usr/syno/etc/synovpnclient/openvpn/ovpnclient.conf
 CONNFILE=/usr/syno/etc/synovpnclient/vpnc_connecting
