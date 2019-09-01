@@ -9,13 +9,13 @@
 # VPN Parameterdatei für den Verbindungsaufbau konfigurieren. Parameter findet man unter
 # /usr/syno/etc/synovpnclient/openvpn/ovpnclient.conf
 CONNFILE=/usr/syno/etc/synovpnclient/vpnc_connecting
-sudo sh -c "echo conf_id=o1562913989 > /usr/syno/etc/synovpnclient/vpnc_connecting"
+sudo sh -c "echo conf_id=o1234567890 > /usr/syno/etc/synovpnclient/vpnc_connecting"
 sudo sh -c "echo conf_name=ds1_home >> /usr/syno/etc/synovpnclient/vpnc_connecting"
 sudo sh -c "echo proto=openvpn >> /usr/syno/etc/synovpnclient/vpnc_connecting"
 
 # VPN-Verbindung mit der eben erzeugten Datei aufbauen
 echo VPN-Verbindung wird aufgebaut...
-sudo /usr/syno/bin/synovpnc connect --id=o1562913989
+sudo /usr/syno/bin/synovpnc connect --id=o1234567890
 
 # Warten bis die VPN-Verbindung steht
 echo Warte 60 Sekunden bis die VPN-Verbindung steht
@@ -26,7 +26,7 @@ sleep 60
 # /usr/syno/etc/synobackup.conf
 # Die << Pfeile weisen das Script an, alle Inhalte bis zum zweiten "EOT" als ein Kommando an den Remote Host zu senden
 echo Backup Job wird gestartet...
-ssh hollynator@192.168.179.1 /bin/bash << 'EOT'
+ssh backupuser@192.168.179.1 /bin/bash << 'EOT'
 /var/packages/HyperBackup/target/bin/dsmbackup --backup 19
 #echo Host nach SSH: $HOSTNAME
 echo sleep 60 vor While Schleife
