@@ -15,22 +15,22 @@ Short description (in German, because it's my native language :-) and I needed t
 -- VPN Connection --> Parameter conf_id, conf_name und proto aus /usr/syno/etc/synovpnclient/vpnc_last_connect
 -- sudo /usr/syno/bin/synovpnc connect --id=o<10stelligeID>
 -- Backup Job --> nur Nummer aus /usr/syno/etc/synobackup.conf --> [task_]
-id_rsa und known_hosts kopieren nach /root/.ssh
-chmod 600 id_rsa
+- id_rsa und known_hosts kopieren nach /root/.ssh
+- chmod 600 id_rsa
 
-Im Task Scheduler neuen Job anlegen
-Create --> Scheduled Task --> User-defined script
-General: User: root
-Task Settings: Run command
-bash /volume1/script/backup2remote/pullbackupvpn.sh
+- Im Task Scheduler neuen Job anlegen
+-- Create --> Scheduled Task --> User-defined script
+-- General: User: root
+-- Task Settings: Run command
+-- bash /volume1/script/backup2remote/pullbackupvpn.sh
 
-Fehlersuche:
-tail -n 100 /var/log/messages
+- Fehlersuche:
+-- tail -n 100 /var/log/messages
 
-Verbose Log im OpenVPN Config File aktivieren (erweitert die Ausgabe in /var/log/messages):
-sudo vi /usr/syno/etc/synovpnclient/openvpn/client_o<10stelligeID>
+- Verbose Log im OpenVPN Config File aktivieren (erweitert die Ausgabe in /var/log/messages):
+-- sudo vi /usr/syno/etc/synovpnclient/openvpn/client_o<10stelligeID>
 --> verb 4 einfügen bzw. reaktivieren
 
-Job als root testen
-sudo -i
-/volume1/script/backup2remote/pullbackupvpn.sh
+- Job als root testen
+-- sudo -i
+-- /volume1/script/backup2remote/pullbackupvpn.sh
