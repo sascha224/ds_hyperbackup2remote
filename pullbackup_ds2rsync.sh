@@ -8,7 +8,7 @@ sleep 30
 
 # SSH auf den zu sichernden Server und Starten des Backup Jobs.
 # Die Konfiguration der Hyper Backup Jobs und die Job-ID findet man in
-# /usr/syno/etc/synobackup.conf
+# /var/packages/HyperBackup/etc/synobackup.conf (alt: /usr/syno/etc/synobackup.conf)
 # Die << Pfeile weisen das Script an, alle Inhalte bis zum zweiten "EOT" als ein Kommando an den Remote Host zu senden
 echo Backup Job wird gestartet...
 ssh hollynator@192.168.179.1 /bin/bash << 'EOT'
